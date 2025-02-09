@@ -18,6 +18,10 @@ mongoose
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 
+app.get("/hi", (req, res) => {
+  res.send("Hi");
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
